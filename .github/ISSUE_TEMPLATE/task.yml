@@ -1,0 +1,23 @@
+name: "ðŸ› ï¸ Tarefa TÃ©cnica / Task"
+description: "Crie uma tarefa de desenvolvimento vinculada ao SDLC"
+title: "[Task][Componente] Nome da Tarefa"
+labels: ["task"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: DescriÃ§Ã£o da Tarefa
+      description: Explique o que precisa ser desenvolvido.
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: CritÃ©rios de Aceite e Sub-tarefas
+      description: Checklist de itens para conclusÃ£o da tarefa.
+      value: |
+        - [ ] Item 1
+        - [ ] Item 2
+        - [ ] Testes automatizados
+    validations:
+      required: true
