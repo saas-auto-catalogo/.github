@@ -21,6 +21,7 @@ O **SaaS Auto Catálogo** é uma plataforma B2B especializada para o setor autom
 
 ## 📚 Documentação Técnica e Especificações
 - [Documento de Arquitetura](./ARCHITECTURE.md)
+- [Engenharia de Requisitos Não-Funcionais (RNFs), SLA e Segurança](./docs/specs/non-functional-requirements-sla.md)
 - [Levantamento de Schemas e Dicionário de Dados de Feeds (XML & JSON)](./docs/specs/vehicle-feed-mapping.md)
 - [Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](./docs/specs/meta-daa-feed-specification.md)
 - [Modelagem de Multi-Tenancy, Isolamento de Workspaces e RBAC](./docs/specs/multi-tenancy-rbac-specification.md)

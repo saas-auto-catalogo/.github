@@ -23,12 +23,15 @@ flowchart TD
 
 ## 2. Padrões Arquiteturais e RNFs
 - **Multi-tenancy**: Isolamento lógico por `workspace_id` em todas as tabelas de negócio com índices compostos de alta performance e extensões do Prisma Client.
-- **Streaming Parser**: Leitura por stream (SAX e HTTP streaming) garantindo suporte a feeds de 50MB+ com `heap < 256MB`.
-- **Feed Meta Caching**: Cache Redis de 15 minutos com compressão GZIP garantindo latência `< 800ms`.
-- **Disponibilidade**: SLA alvo de 99.9% para os endpoints públicos de feed.
-- **Segurança & LGPD**: Criptografia TLS 1.3, hashing de tokens com salt (HMAC-SHA256), matriz de permissões RBAC e trilha de auditoria síncrona (`AuditLog`) com suporte a impersonation auditado.
+- **Streaming Parser**: Leitura por stream (SAX e HTTP streaming) garantindo suporte a feeds de 50MB+ (5.000 veículos) em `< 30s` com `heap < 256MB`.
+- **Feed Meta Caching**: Cache Redis de 15 minutos com compressão GZIP garantindo latência `< 800ms` (p50 `< 250ms`).
+- **Disponibilidade & Resiliência**: SLA de 99.9% de uptime para feeds públicos, Circuit Breaker com fallback gracioso e retries exponenciais com jitter para DMSs parceiros.
+- **Escalabilidade Assíncrona**: Filas BullMQ distribuídas por prioridade (`high`, `normal`, `low`) e rate limiting por host de DMS.
+- **Segurança & LGPD**: Criptografia TLS 1.3 em trânsito e AES-256 em repouso, hashing HMAC-SHA256 para tokens, trilha imutável no `AuditLog`, expurgo automático de logs em 30 dias e suporte a purge de tenant.
+- **Core Web Vitals**: Google Lighthouse 95+, LCP `< 1.8s`, CLS `< 0.05` e INP `< 150ms` via ISR no Next.js 15 / Astro.
 
 ## 3. Especificações Técnicas de Engenharia
+- [Engenharia de Requisitos Não-Funcionais (RNFs), SLA e Segurança](./docs/specs/non-functional-requirements-sla.md)
 - [Dicionário de Schemas e Mapeamento de Feeds (XML & JSON)](./docs/specs/vehicle-feed-mapping.md)
 - [Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](./docs/specs/meta-daa-feed-specification.md)
 - [Modelagem de Multi-Tenancy, Isolamento de Workspaces e RBAC](./docs/specs/multi-tenancy-rbac-specification.md)
