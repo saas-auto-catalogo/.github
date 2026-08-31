@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<altimus>
+  <data_geracao>2026-08-31T18:00:00</data_geracao>
+  <cliente_id>8821</cliente_id>
+  <estoque>
+    <veiculo>
+      <id>994120</id>
+      <codigo_estoque>EST-2024-09</codigo_estoque>
+      <placa>RGN9J40</placa>
+      <chassi>3N1CN7AP5RL109283</chassi>
+      <fabricante>Nissan</fabricante>
+      <modelo>Kicks</modelo>
+      <versao>Advance 1.6 16V FlexStar Xtronic</versao>
+      <ano_fabricacao>2024</ano_fabricacao>
+      <ano_modelo>2024</ano_modelo>
+      <cor>Branco Diamond com Teto Preto</cor>
+      <combustivel>Gasolina e Álcool</combustivel>
+      <transmissao>CVT</transmissao>
+      <portas>4</portas>
+      <km>14800</km>
+      <preco_venda>108900.00</preco_venda>
+      <blindado>nao</blindado>
+      <opcionais>
+        <opcional>Alarme perimétrico</opcional>
+        <opcional>Chave presencial I-Key</opcional>
+        <opcional>Botão Push Start</opcional>
+        <opcional>Painel multifuncional em HD de 7 pol</opcional>
+        <opcional>Multimídia Nissan Connect de 8 pol</opcional>
+        <opcional>Câmera de ré com sensor traseiro</opcional>
+      </opcionais>
+      <fotos>
+        <foto ordem="1" principal="sim" url="https://cdn.altimus.com.br/revendas/8821/veiculos/994120/foto1_hd.jpg" />
+        <foto ordem="2" principal="nao" url="https://cdn.altimus.com.br/revendas/8821/veiculos/994120/foto2_hd.jpg" />
+        <foto ordem="3" principal="nao" url="https://cdn.altimus.com.br/revendas/8821/veiculos/994120/foto3_hd.jpg" />
+      </fotos>
+      <descricao><![CDATA[Nissan Kicks Advance 2024 impecável, com teto bi-tom de fábrica. Aceitamos seu usado na troca com a melhor avaliação de SP. Financiamento com as menores taxas do mercado.]]></descricao>
+      <url>https://revendaaltimus.com.br/estoque/nissan-kicks-advance-2024-994120</url>
+    </veiculo>
+  </estoque>
+</altimus>

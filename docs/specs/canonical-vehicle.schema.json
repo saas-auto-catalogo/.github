@@ -1,0 +1,328 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://saas-auto-catalogo.github.io/schemas/canonical-vehicle.schema.json",
+  "title": "CanonicalVehicle",
+  "description": "Esquema JSON do Modelo Canônico de Veículos para o SaaS Auto Catálogo",
+  "type": "object",
+  "required": [
+    "id",
+    "workspaceId",
+    "externalId",
+    "make",
+    "model",
+    "version",
+    "title",
+    "bodyStyle",
+    "manufactureYear",
+    "modelYear",
+    "doors",
+    "colors",
+    "mileage",
+    "fuelType",
+    "transmission",
+    "armored",
+    "pricing",
+    "condition",
+    "status",
+    "images",
+    "heroImageUrl",
+    "features",
+    "description",
+    "metadata"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Identificador único canônico no banco de dados do SaaS (UUID v4)"
+    },
+    "workspaceId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "ID do tenant / revenda proprietária do estoque"
+    },
+    "externalId": {
+      "type": "string",
+      "description": "Identificador original no DMS ou Feed de origem",
+      "minLength": 1
+    },
+    "vin": {
+      "type": "string",
+      "description": "Número do Chassi / VIN do veículo (opcional)"
+    },
+    "licensePlate": {
+      "type": "string",
+      "description": "Placa do veículo (padrão Mercosul ou três letras e quatro números)"
+    },
+    "stockNumber": {
+      "type": "string",
+      "description": "Código interno de estoque / SKU"
+    },
+    "make": {
+      "type": "string",
+      "description": "Marca / Fabricante normalizado",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "description": "Modelo do veículo",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "description": "Versão de acabamento e motorização"
+    },
+    "title": {
+      "type": "string",
+      "description": "Título formatado do anúncio",
+      "minLength": 3
+    },
+    "bodyStyle": {
+      "type": "string",
+      "enum": [
+        "SUV",
+        "SEDAN",
+        "HATCHBACK",
+        "COUPE",
+        "CONVERTIBLE",
+        "PICKUP",
+        "MINIVAN",
+        "VAN",
+        "WAGON",
+        "COMMERCIAL",
+        "MOTORCYCLE",
+        "OTHER"
+      ]
+    },
+    "manufactureYear": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2100,
+      "description": "Ano de fabricação do veículo"
+    },
+    "modelYear": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2100,
+      "description": "Ano do modelo do veículo"
+    },
+    "doors": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 6,
+      "description": "Quantidade de portas"
+    },
+    "colors": {
+      "type": "object",
+      "required": ["exterior"],
+      "properties": {
+        "exterior": {
+          "type": "string",
+          "description": "Nome comercial da cor externa"
+        },
+        "exteriorBase": {
+          "type": "string",
+          "description": "Cor primária normalizada para agrupamento"
+        },
+        "interior": {
+          "type": "string",
+          "description": "Descrição do acabamento ou cor interna"
+        }
+      }
+    },
+    "mileage": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Quilometragem rodada em km"
+    },
+    "fuelType": {
+      "type": "string",
+      "enum": [
+        "FLEX",
+        "GASOLINA",
+        "ETANOL",
+        "DIESEL",
+        "HIBRIDO",
+        "HIBRIDO_PLUG_IN",
+        "MHEV_HIBRIDO_LEVE",
+        "ELETRICO",
+        "GNV",
+        "TETRAFUEL",
+        "OUTRO"
+      ]
+    },
+    "transmission": {
+      "type": "string",
+      "enum": [
+        "MANUAL",
+        "AUTOMATICO",
+        "AUTOMATIZADO",
+        "CVT",
+        "DUPLA_EMBREAGEM",
+        "SEMI_AUTOMATICO",
+        "OUTRO"
+      ]
+    },
+    "engineSize": {
+      "type": "string",
+      "description": "Cilindrada / Motorização (ex: '2.0', '3.0 V6')"
+    },
+    "horsepower": {
+      "type": "integer",
+      "description": "Potência do motor em cv"
+    },
+    "drivetrain": {
+      "type": "string",
+      "description": "Tração (ex: '4x2', '4x4', 'AWD', 'RWD', 'FWD')"
+    },
+    "armored": {
+      "type": "boolean",
+      "description": "Indica se o veículo possui blindagem"
+    },
+    "pricing": {
+      "type": "object",
+      "required": ["price", "currency", "priceOnRequest"],
+      "properties": {
+        "price": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Preço anunciado em Reais (formato decimal: 489700.00)"
+        },
+        "promotionalPrice": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Preço promocional se houver"
+        },
+        "currency": {
+          "type": "string",
+          "enum": ["BRL"],
+          "default": "BRL"
+        },
+        "priceOnRequest": {
+          "type": "boolean",
+          "description": "Indica se o preço está sob consulta"
+        }
+      }
+    },
+    "condition": {
+      "type": "string",
+      "enum": ["NOVO", "SEMINOVO", "USADO"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["AVAILABLE", "RESERVED", "SOLD"]
+    },
+    "hasWarranty": {
+      "type": "boolean",
+      "description": "Indica se possui garantia ativa"
+    },
+    "warrantyDetails": {
+      "type": "string",
+      "description": "Detalhes textuais da garantia"
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL da página de detalhes do veículo no site da revenda"
+    },
+    "images": {
+      "type": "array",
+      "description": "Galeria de imagens ordenadas do veículo",
+      "items": {
+        "type": "object",
+        "required": ["url", "order", "isPrimary"],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL da imagem em HTTPS"
+          },
+          "fullUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL original ou de alta resolução da CDN"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "isPrimary": {
+            "type": "boolean"
+          },
+          "alt": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "heroImageUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL da foto de capa principal em HTTPS"
+    },
+    "features": {
+      "type": "array",
+      "description": "Lista de opcionais padronizados",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rawOptions": {
+      "type": "array",
+      "description": "Lista original de opcionais do DMS",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string",
+      "description": "Descrição sanitizada para exportação ao catálogo Meta Ads"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas completas / ficha técnica interna da revenda"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["source", "rawPayloadHash", "ingestedAt", "updatedAt"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": [
+            "AUTOCERTO",
+            "ALTIMUS",
+            "SISVAG",
+            "BOMCONTROLE",
+            "WEBMOTORS",
+            "BASE44",
+            "SPICE_DIGITAL",
+            "GENERIC_XML",
+            "GENERIC_JSON",
+            "CUSTOM_API"
+          ]
+        },
+        "feedId": {
+          "type": "string"
+        },
+        "rawPayloadHash": {
+          "type": "string",
+          "description": "Hash SHA-256 do payload de entrada"
+        },
+        "ingestedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "validationWarnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

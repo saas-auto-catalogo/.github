@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sisvag_estoque>
+  <gerado_em>2026-08-31 15:30:00</gerado_em>
+  <loja_codigo>SIS-440</loja_codigo>
+  <veiculos>
+    <veiculo>
+      <codigo_veiculo>77812</codigo_veiculo>
+      <placa>FXZ3B45</placa>
+      <chassi>8AFBN41K6LJ001928</chassi>
+      <marca>Toyota</marca>
+      <modelo>Corolla Cross</modelo>
+      <versao>XRX Hybrid 1.8 16V Flex Aut.</versao>
+      <ano_fabricacao>2023</ano_fabricacao>
+      <ano_modelo>2024</ano_modelo>
+      <cor>Prata Granito</cor>
+      <tipo_combustivel>Hibrido</tipo_combustivel>
+      <tipo_cambio>CVT</tipo_cambio>
+      <qtd_portas>4</qtd_portas>
+      <km>28400</km>
+      <valor>178900.00</valor>
+      <blindado>0</blindado>
+      <itens_serie>
+        <item>Teto Solar Elétrico</item>
+        <item>Faróis Full LED com Projetor</item>
+        <item>Alerta de Ponto Cego (BSM)</item>
+        <item>Alerta de Tráfego Traseiro</item>
+        <item>Frenagem Autônoma de Emergência</item>
+        <item>Toyota Safety Sense</item>
+        <item>Bancos em Couro Bege</item>
+      </itens_serie>
+      <fotos>
+        <foto>https://fotos.sisvag.com.br/loja440/veiculo77812/img01.jpg</foto>
+        <foto>https://fotos.sisvag.com.br/loja440/veiculo77812/img02.jpg</foto>
+        <foto>https://fotos.sisvag.com.br/loja440/veiculo77812/img03.jpg</foto>
+      </fotos>
+      <detalhes><![CDATA[Toyota Corolla Cross XRX Híbrido, média de consumo de 20 km/l na cidade, silêncio e conforto incomparáveis. Veículo com revisões na autorizada Toyota.]]></detalhes>
+      <link_direto>https://sisvagmotors.com.br/carro/toyota-corolla-cross-hybrid-2024-77812</link_direto>
+    </veiculo>
+  </veiculos>
+</sisvag_estoque>

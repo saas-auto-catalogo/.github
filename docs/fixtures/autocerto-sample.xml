@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<estoque versao="1.0">
+  <revenda>
+    <id>1042</id>
+    <nome>Auto Shopping Motors</nome>
+    <cidade>São Paulo</cidade>
+    <uf>SP</uf>
+  </revenda>
+  <veiculos>
+    <veiculo>
+      <codigo>AC-84920</codigo>
+      <placa>BRA2E19</placa>
+      <chassi>9BWCA45U8LP019284</chassi>
+      <marca>Volkswagen</marca>
+      <modelo>Nivus</modelo>
+      <versao>Highline 200 TSI 1.0 Flex Aut.</versao>
+      <tipo>Passeio</tipo>
+      <carroceria>SUV</carroceria>
+      <anofabricacao>2023</anofabricacao>
+      <anomodelo>2024</anomodelo>
+      <cor>Cinza Moonstone</cor>
+      <combustivel>Flex</combustivel>
+      <cambio>Automático</cambio>
+      <portas>4</portas>
+      <quilometragem>21500</quilometragem>
+      <preco>124900.00</preco>
+      <preco_promocional>119900.00</preco_promocional>
+      <blindado>N</blindado>
+      <opcionais>
+        <opcional>Ar Condicionado Digital Climatronic</opcional>
+        <opcional>Direção Elétrica</opcional>
+        <opcional>Freios ABS com EBD</opcional>
+        <opcional>Airbags Frontais, Laterais e de Cortina</opcional>
+        <opcional>Controle de Cruzeiro Adaptativo (ACC)</opcional>
+        <opcional>Painel Digital Active Info Display 10 pol</opcional>
+        <opcional>Central Multimídia VW Play com Apple CarPlay sem fio</opcional>
+        <opcional>Câmera de Marcha a Ré</opcional>
+        <opcional>Rodas de Liga Leve Aro 17</opcional>
+      </opcionais>
+      <fotos>
+        <foto>https://img.autocerto.com/fotos/1042/84920/foto1.jpg</foto>
+        <foto>https://img.autocerto.com/fotos/1042/84920/foto2.jpg</foto>
+        <foto>https://img.autocerto.com/fotos/1042/84920/foto3.jpg</foto>
+      </fotos>
+      <observacoes><![CDATA[Veículo de único dono, todas as revisões feitas na concessionária, com garantia de fábrica até 2026. Laudo cautelar 100% aprovado.]]></observacoes>
+      <url_anuncio>https://autoshoppingmotors.com.br/veiculo/volkswagen-nivus-highline-2024-ac84920</url_anuncio>
+    </veiculo>
+  </veiculos>
+</estoque>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bomcontrole_erp>
+  <empresa id="BC-9901">Grupo Prime Veiculos</empresa>
+  <data_exportacao>2026-08-31T17:00:00Z</data_exportacao>
+  <veiculos>
+    <veiculo>
+      <id>BC-VEC-5521</id>
+      <codigo_interno>PRIME-0552</codigo_interno>
+      <placa>GHJ8A90</placa>
+      <chassi>9BD178235RL901234</chassi>
+      <marca>Jeep</marca>
+      <modelo>Compass</modelo>
+      <versao>Limited 1.3 T270 Turbo Flex Aut.</versao>
+      <categoria>SUV</categoria>
+      <ano>2024</ano>
+      <ano_modelo>2025</ano_modelo>
+      <cor>Cinza Sting Gray</cor>
+      <combustivel>FLEX</combustivel>
+      <cambio>AUTOMATICO</cambio>
+      <portas>4</portas>
+      <quilometragem>9800</quilometragem>
+      <valor_venda>174900.00</valor_venda>
+      <status_comercial>DISPONIVEL</status_comercial>
+      <blindado>false</blindado>
+      <caracteristicas>
+        <item>Cluster Digital 10.25 pol</item>
+        <item>Central Multimídia Adventure Intelligence 10.1 pol</item>
+        <item>Rodas de Liga Leve Aro 19 diamantadas</item>
+        <item>Park Assist (Assistente de estacionamento semi-autônomo)</item>
+        <item>Bancos em Couro Preto com ajuste elétrico motorista</item>
+      </caracteristicas>
+      <imagens>
+        <imagem ordem="1" destaque="true">https://cdn.bomcontrole.com.br/arquivos/empresas/9901/veiculos/5521/foto_01.webp</imagem>
+        <imagem ordem="2" destaque="false">https://cdn.bomcontrole.com.br/arquivos/empresas/9901/veiculos/5521/foto_02.webp</imagem>
+        <imagem ordem="3" destaque="false">https://cdn.bomcontrole.com.br/arquivos/empresas/9901/veiculos/5521/foto_03.webp</imagem>
+      </imagens>
+      <informacoes_adicionais><![CDATA[Jeep Compass Limited 2025 em estado de zero km! Equipado com motor T270 turbo flex, painel digital e pacote High Tech completo.]]></informacoes_adicionais>
+      <url_estoque>https://grupoprimeveiculos.com.br/estoque/jeep-compass-limited-2025-5521</url_estoque>
+    </veiculo>
+  </veiculos>
+</bomcontrole_erp>
