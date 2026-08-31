@@ -1,0 +1,19 @@
+name: "ðŸ› Relato de Bug"
+description: "Reporte uma falha ou comportamento inesperado"
+title: "[Bug] DescriÃ§Ã£o do Problema"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: DescriÃ§Ã£o do Bug
+      description: Explique o comportamento observado vs o esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passos para ReproduÃ§Ã£o
+      description: Como reproduzir o problema.
+    validations:
+      required: true
