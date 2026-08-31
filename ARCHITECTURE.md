@@ -22,15 +22,17 @@ flowchart TD
 ```
 
 ## 2. Padrões Arquiteturais e RNFs
-- **Multi-tenancy**: Isolamento lógico por `workspace_id` com índices compostos no PostgreSQL.
+- **Multi-tenancy**: Isolamento lógico por `workspace_id` em todas as tabelas de negócio com índices compostos de alta performance e extensões do Prisma Client.
 - **Streaming Parser**: Leitura por stream (SAX e HTTP streaming) garantindo suporte a feeds de 50MB+ com `heap < 256MB`.
 - **Feed Meta Caching**: Cache Redis de 15 minutos com compressão GZIP garantindo latência `< 800ms`.
 - **Disponibilidade**: SLA alvo de 99.9% para os endpoints públicos de feed.
-- **Segurança & LGPD**: Criptografia TLS 1.3, hashing de tokens e trilha de auditoria (`AuditLog`).
+- **Segurança & LGPD**: Criptografia TLS 1.3, hashing de tokens com salt (HMAC-SHA256), matriz de permissões RBAC e trilha de auditoria síncrona (`AuditLog`) com suporte a impersonation auditado.
 
 ## 3. Especificações Técnicas de Engenharia
 - [Dicionário de Schemas e Mapeamento de Feeds (XML & JSON)](./docs/specs/vehicle-feed-mapping.md)
 - [Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](./docs/specs/meta-daa-feed-specification.md)
+- [Modelagem de Multi-Tenancy, Isolamento de Workspaces e RBAC](./docs/specs/multi-tenancy-rbac-specification.md)
+- [Schema de Referência Prisma Multi-Tenant](./docs/specs/prisma-schema-multitenancy.prisma)
 - [Modelo Canônico em TypeScript (`CanonicalVehicle`)](./docs/specs/canonical-vehicle.ts)
 - [JSON Schema do Veículo Canônico](./docs/specs/canonical-vehicle.schema.json)
 - [JSON Schema de Saída do Meta DAA Feed](./docs/specs/meta-daa-feed.schema.json)
