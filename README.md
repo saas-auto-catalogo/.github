@@ -22,9 +22,11 @@ O **SaaS Auto Catálogo** é uma plataforma B2B especializada para o setor autom
 ## 📚 Documentação Técnica e Especificações
 - [Documento de Arquitetura](./ARCHITECTURE.md)
 - [Levantamento de Schemas e Dicionário de Dados de Feeds (XML & JSON)](./docs/specs/vehicle-feed-mapping.md)
+- [Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](./docs/specs/meta-daa-feed-specification.md)
 - [Definição TypeScript Canônica (`CanonicalVehicle`)](./docs/specs/canonical-vehicle.ts)
 - [JSON Schema Canônico](./docs/specs/canonical-vehicle.schema.json)
-- [Amostras e Fixtures de Feeds Reais](./docs/fixtures/)
+- [JSON Schema de Saída do Meta DAA Feed](./docs/specs/meta-daa-feed.schema.json)
+- [Amostras e Fixtures de Feeds Reais e XML Meta DAA](./docs/fixtures/)
 - [Diretrizes de Contribuição](./CONTRIBUTING.md)
 
 ---

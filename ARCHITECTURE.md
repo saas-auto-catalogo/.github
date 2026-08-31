@@ -30,6 +30,8 @@ flowchart TD
 
 ## 3. Especificações Técnicas de Engenharia
 - [Dicionário de Schemas e Mapeamento de Feeds (XML & JSON)](./docs/specs/vehicle-feed-mapping.md)
+- [Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](./docs/specs/meta-daa-feed-specification.md)
 - [Modelo Canônico em TypeScript (`CanonicalVehicle`)](./docs/specs/canonical-vehicle.ts)
 - [JSON Schema do Veículo Canônico](./docs/specs/canonical-vehicle.schema.json)
-- [Amostras e Fixtures de Feeds Reais](./docs/fixtures/)
+- [JSON Schema de Saída do Meta DAA Feed](./docs/specs/meta-daa-feed.schema.json)
+- [Amostras e Fixtures de Feeds Reais e XML Meta DAA](./docs/fixtures/)
