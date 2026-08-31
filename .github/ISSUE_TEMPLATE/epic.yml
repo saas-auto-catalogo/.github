@@ -1,0 +1,25 @@
+name: "ðŸ“Œ Ã‰pico SDLC"
+description: "Crie um novo Ã‰pico estruturado para o ciclo de vida SDLC"
+title: "[Epic][Fase X] Nome do Ã‰pico"
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: "### ðŸŽ¯ Macro-entrega de Fase do SDLC"
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo do Ã‰pico
+      description: Descreva o objetivo de negÃ³cio e tÃ©cnico desta entrega.
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Issues e Tarefas Vinculadas
+      description: Liste as issues que compÃµem este Ã©pico.
+      value: |
+        - [ ] #Issue 1
+        - [ ] #Issue 2
+    validations:
+      required: true
