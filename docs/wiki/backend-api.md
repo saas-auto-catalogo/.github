@@ -66,7 +66,27 @@ API core multi-tenant: ingestão de estoque, diffs, feeds Meta DAA, autenticaç�
 | `npm run test:feeds` | CRUD e sync de feeds |
 | `npm run test:dashboard` | Stats, vehicles, audit-logs, issues, activity |
 | `npm run test:subscription` | Stripe lifecycle e billing |
+| `npm run test:subscription` | Stripe lifecycle e billing |
 | `npm run test:all` | Suite agregada |
+
+## CI (GitHub Actions)
+
+Workflow `.github/workflows/ci.yml` em PRs e pushes em `main`:
+
+| Job | Escopo |
+|-----|--------|
+| `unit` | prisma validate, typecheck, test:qa, parser, normalization, diff, meta-feed, meta-connector, vehicles |
+| `integration` | Postgres 17 + Redis 7, migrate deploy, seed, `npm run test:ci` |
+
+Reproduzir localmente:
+
+```bash
+docker compose up -d
+export DATABASE_URL=postgresql://postgres:postgres@localhost:5432/auto_catalogo_db?schema=public
+export REDIS_URL=redis://localhost:6379
+npx prisma migrate deploy && npm run prisma:seed
+npm run test:ci
+```
 
 ## Variáveis de ambiente
 
