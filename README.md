@@ -1,39 +1,67 @@
-# 🏢 Organização SaaS Auto Catálogo
+# Organização SaaS Auto Catálogo
 
-Bem-vindo à organização oficial do **SaaS Auto Catálogo** no GitHub!
+Bem-vindo à organização oficial do **SaaS Auto Catálogo** no GitHub.
 
-O **SaaS Auto Catálogo** é uma plataforma B2B especializada para o setor automotivo que resolve o gargalo de sincronização de estoque entre gestores de pátio/DMSs (AutoCerto, Altimus, Sisvag, BomControle, Webmotors, Base44, Spice Digital) e o **Meta Ads (Automotive Inventory Ads - DAA)** para campanhas dinâmicas no Facebook e Instagram.
-
----
-
-## 🏛️ Mapa de Repositórios
-
-| Repositório | Escopo | Stack Principal |
-|---|---|---|
-| [**backend-api**](https://github.com/saas-auto-catalogo/backend-api) | API Core, Ingestão XML/JSON, Diff Engine, Feed Meta DAA & Auth | Node.js / TypeScript, Fastify/NestJS, Prisma, PostgreSQL, Redis, BullMQ |
-| [**frontend-app**](https://github.com/saas-auto-catalogo/frontend-app) | Painel Web da Revenda / Lojista & Simulador Meta Ads | Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn/UI |
-| [**backoffice-app**](https://github.com/saas-auto-catalogo/backoffice-app) | Painel Super Admin (Tenants, Feeds, IA & Métricas) | Next.js 15 / React, TypeScript, Tailwind CSS, Shadcn/UI |
-| [**marketing-site-blog**](https://github.com/saas-auto-catalogo/marketing-site-blog) | Site Institucional (Planos, Preços) & Blog Audience First | Next.js 15 / Astro, Tailwind CSS, MDX, Stripe & Asaas SDKs |
-| [**ai-content-worker**](https://github.com/saas-auto-catalogo/ai-content-worker) | Worker IA (Open Deep Research + Gemini) para o Blog | Python / Node.js, Google GenAI SDK (Gemini 3.1 Pro / Flash) |
-| [**.github**](https://github.com/saas-auto-catalogo/.github) | Governança, Templates de SDLC e Documentação Técnica | GitHub Actions, Issue Templates, Architecture Docs, Schemas |
+O **SaaS Auto Catálogo** é uma plataforma B2B para o setor automotivo que sincroniza estoque entre gestores de pátio/DMS (AutoCerto, Altimus, Sisvag, BomControle, Webmotors e outros) e o **Meta Ads (Automotive Inventory Ads — DAA)** para campanhas dinâmicas no Facebook e Instagram.
 
 ---
 
-## 📚 Documentação Técnica e Especificações
+## Mapa de repositórios
+
+| Repositório | Escopo | Stack principal |
+|-------------|--------|-----------------|
+| [**backend-api**](https://github.com/saas-auto-catalogo/backend-api) | API core, ingestão XML/JSON, diff engine, feeds Meta DAA, auth, dashboard, billing | Node.js 22, TypeScript, Fastify 5, Prisma, PostgreSQL, Redis, BullMQ |
+| [**frontend-app**](https://github.com/saas-auto-catalogo/frontend-app) | Painel web do lojista e simulador Meta Ads | React 18, TypeScript, Vite 6, Tailwind CSS, React Router |
+| [**backoffice-app**](https://github.com/saas-auto-catalogo/backoffice-app) | Painel Super Admin (tenants, feeds, IA e métricas) | React 18, TypeScript, Vite 6, Tailwind CSS |
+| [**marketing-site-blog**](https://github.com/saas-auto-catalogo/marketing-site-blog) | Site institucional, planos e blog Audience First | React 18, TypeScript, Vite 6, Tailwind CSS |
+| [**ai-content-worker**](https://github.com/saas-auto-catalogo/ai-content-worker) | Worker IA (LangGraph + Gemini) para o blog | Node.js, TypeScript, LangGraph, Google Gemini |
+| [**.github**](https://github.com/saas-auto-catalogo/.github) | Governança, templates SDLC, specs e wiki | GitHub Actions, issue templates, documentação |
+
+---
+
+## Wiki (documentação operacional)
+
+A wiki centraliza setup local, rotas, módulos e roadmap:
+
+- [**Índice da Wiki**](./docs/wiki/README.md)
+- [backend-api](./docs/wiki/backend-api.md)
+- [frontend-app](./docs/wiki/frontend-app.md)
+- [backoffice-app](./docs/wiki/backoffice-app.md)
+- [marketing-site-blog](./docs/wiki/marketing-site-blog.md)
+- [ai-content-worker](./docs/wiki/ai-content-worker.md)
+- [Roadmap](./docs/wiki/roadmap.md)
+
+---
+
+## Documentação técnica (specs)
+
 - [Documento de Arquitetura](./ARCHITECTURE.md)
-- [Engenharia de Requisitos Não-Funcionais (RNFs), SLA e Segurança](./docs/specs/non-functional-requirements-sla.md)
-- [Levantamento de Schemas e Dicionário de Dados de Feeds (XML & JSON)](./docs/specs/vehicle-feed-mapping.md)
-- [Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](./docs/specs/meta-daa-feed-specification.md)
-- [Modelagem de Multi-Tenancy, Isolamento de Workspaces e RBAC](./docs/specs/multi-tenancy-rbac-specification.md)
-- [Schema de Referência Prisma Multi-Tenant](./docs/specs/prisma-schema-multitenancy.prisma)
-- [Definição TypeScript Canônica (`CanonicalVehicle`)](./docs/specs/canonical-vehicle.ts)
-- [JSON Schema Canônico](./docs/specs/canonical-vehicle.schema.json)
-- [JSON Schema de Saída do Meta DAA Feed](./docs/specs/meta-daa-feed.schema.json)
-- [Amostras e Fixtures de Feeds Reais e XML Meta DAA](./docs/fixtures/)
-- [Diretrizes de Contribuição](./CONTRIBUTING.md)
+- [RNFs, SLA e Segurança](./docs/specs/non-functional-requirements-sla.md)
+- [Mapeamento de feeds XML e JSON](./docs/specs/vehicle-feed-mapping.md)
+- [Especificação Meta DAA](./docs/specs/meta-daa-feed-specification.md)
+- [Multi-tenancy e RBAC](./docs/specs/multi-tenancy-rbac-specification.md)
+- [Schema Prisma de referência](./docs/specs/prisma-schema-multitenancy.prisma)
+- [Modelo canônico `CanonicalVehicle`](./docs/specs/canonical-vehicle.ts)
+- [Fixtures de feeds reais](./docs/fixtures/)
+- [Diretrizes de contribuição](./CONTRIBUTING.md)
 
 ---
 
-## 🔄 Metodologia SDLC e Governança
-- Todas as tarefas são rastreadas via **Épicos, Issues e Sub-tasks** padronizadas.
-- Todos os PRs devem referenciar a issue correspondente e passar pelas validações de CI/CD.
+## Metodologia SDLC
+
+- Tarefas rastreadas via **épicos, issues e sub-issues** com dependências `blocked-by` entre frontend e backend.
+- PRs devem referenciar a issue (`Closes #N`) e passar na esteira de CI (lint, typecheck, testes).
+
+---
+
+## Ambiente local rápido
+
+```bash
+# Backend (porta 3333)
+cd backend-api && npm install && npx prisma migrate dev && npm run prisma:seed && npm start
+
+# Frontend lojista (porta 3000)
+cd frontend-app && npm install && npm run dev
+```
+
+Credenciais seed: `carlos.silva@autoelitemotors.com.br` / `Teste123!`

@@ -11,13 +11,13 @@ flowchart TD
     Redis --> PublicFeed[/api/v1/feeds/:token/meta-vehicles.xml]
     PublicFeed --> MetaAds[Meta Ads Commerce Manager / DAA]
     
-    Tenant[Lojista / Concessionária] --> FrontendApp[frontend-app<br/>Next.js 15 Dashboard]
+    Tenant[Lojista / Concessionária] --> FrontendApp[frontend-app<br/>React 18 + Vite Dashboard]
     FrontendApp --> Backend
     
-    SuperAdmin[Equipe SaaS] --> BackofficeApp[backoffice-app<br/>Super Admin Operations]
+    SuperAdmin[Equipe SaaS] --> BackofficeApp[backoffice-app<br/>React 18 + Vite Super Admin]
     BackofficeApp --> Backend
     
-    Lead[Público / Leads] --> MarketingSite[marketing-site-blog<br/>Site Institucional & Blog]
+    Lead[Público / Leads] --> MarketingSite[marketing-site-blog<br/>React 18 + Vite Site & Blog]
     AIWorker[ai-content-worker<br/>Deep Research + Gemini] -->|Publicação de Artigos| Backend
 ```
 
@@ -28,7 +28,14 @@ flowchart TD
 - **Disponibilidade & Resiliência**: SLA de 99.9% de uptime para feeds públicos, Circuit Breaker com fallback gracioso e retries exponenciais com jitter para DMSs parceiros.
 - **Escalabilidade Assíncrona**: Filas BullMQ distribuídas por prioridade (`high`, `normal`, `low`) e rate limiting por host de DMS.
 - **Segurança & LGPD**: Criptografia TLS 1.3 em trânsito e AES-256 em repouso, hashing HMAC-SHA256 para tokens, trilha imutável no `AuditLog`, expurgo automático de logs em 30 dias e suporte a purge de tenant.
-- **Core Web Vitals**: Google Lighthouse 95+, LCP `< 1.8s`, CLS `< 0.05` e INP `< 150ms` via ISR no Next.js 15 / Astro.
+- **Core Web Vitals**: Google Lighthouse 95+, LCP `< 1.8s`, CLS `< 0.05` e INP `< 150ms` nas SPAs Vite (frontend, backoffice, marketing).
+
+## 4. Wiki e documentação operacional
+
+- [Índice da Wiki](./docs/wiki/README.md)
+- [backend-api](./docs/wiki/backend-api.md) — rotas, módulos e testes
+- [frontend-app](./docs/wiki/frontend-app.md) — painel do lojista
+- [Roadmap](./docs/wiki/roadmap.md) — épicos e dependências atuais
 
 ## 3. Especificações Técnicas de Engenharia
 - [Engenharia de Requisitos Não-Funcionais (RNFs), SLA e Segurança](./docs/specs/non-functional-requirements-sla.md)

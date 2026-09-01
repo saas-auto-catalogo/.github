@@ -1,20 +1,32 @@
-# ðŸ“œ Guia de ContribuiÃ§Ã£o & Ciclo de Vida SDLC
+# Guia de Contribuição e Ciclo de Vida SDLC
 
-## ðŸŒ¿ GovernanÃ§a de Branches
-- \main\: Branch de produÃ§Ã£o estÃ¡vel.
-- \develop\: Branch de integraÃ§Ã£o contÃ­nua.
-- \eature/[epic-id]-[nome]\: Branches de novas funcionalidades.
-- \ix/[issue-id]-[nome]\: Branches de correÃ§Ãµes de bugs.
+## Governança de branches
 
-## âœï¸ ConvenÃ§Ã£o de Commits (Conventional Commits)
-- \eat:\ Nova funcionalidade.
-- \ix:\ CorreÃ§Ã£o de bug.
-- \docs:\ DocumentaÃ§Ã£o.
-- \efactor:\ RefatoraÃ§Ã£o sem alteraÃ§Ã£o de comportamento.
-- \	est:\ Testes automatizados.
-- \chore:\ ManutenÃ§Ã£o de configs e dependÃªncias.
+- `main` — produção estável
+- `develop` — integração contínua (quando usada)
+- `feat/issue-N-descricao` — novas funcionalidades
+- `fix/issue-N-descricao` — correções de bugs
 
-## ðŸ“‹ Fluxo de Pull Requests
-1. Toda PR deve referenciar uma Issue existente (\Closes #123\).
-2. A esteira de CI (Lint, Typecheck, Testes) deve passar com 100% de sucesso.
-3. NecessÃ¡ria aprovaÃ§Ã£o de code review antes do merge na \develop\ ou \main\.
+## Convenção de commits (Conventional Commits)
+
+- `feat:` — nova funcionalidade
+- `fix:` — correção de bug
+- `docs:` — documentação
+- `refactor:` — refatoração sem mudança de comportamento
+- `test:` — testes automatizados
+- `chore:` — manutenção de configs e dependências
+
+## Fluxo de pull requests
+
+1. Toda PR deve referenciar uma issue existente (`Closes #123`).
+2. A esteira de CI (lint, typecheck, testes) deve passar.
+3. Code review obrigatório antes do merge em `main`.
+
+## Dependências entre repositórios
+
+Funcionalidades que cruzam frontend e backend devem declarar `blocked-by` na issue do GitHub. Consulte o [roadmap](./docs/wiki/roadmap.md) antes de iniciar trabalho em épicos abertos (#19 Settings, #20 Onboarding).
+
+## Documentação
+
+- Atualize o README do repositório ao mudar stack, rotas ou setup local.
+- Detalhes operacionais vão na [wiki](./docs/wiki/README.md) do repositório `.github`.
