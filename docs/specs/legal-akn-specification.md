@@ -206,25 +206,23 @@ A Política de Privacidade e o Aviso LGPD devem refletir esses compromissos téc
 ## 7. Dependências e bloqueios
 
 ```
-Escrita W1–W5 (v1 mergeada)
-  → CI manifest (legal-docs)
-  → API LegalDocument / LegalAcceptance (backend-api)
-  → Register + Subscribe consent (backend + frontend)
-  → Páginas /legal/* + footer (marketing)
-  → Cookie banner (marketing)
-  → Smoke E2E (.github)
+Escrita W1–W5 (v1 mergeada) ✅
+  → CI manifest (legal-docs) ✅
+  → API LegalDocument / LegalAcceptance (backend-api) ✅
+  → Register + Subscribe consent (backend + frontend) ✅
+  → Páginas /legal/* + footer (marketing) ✅
+  → Cookie banner (marketing) ✅
+  → Smoke E2E (.github#21 / backend-api#76) ✅
 ```
 
-**Bloqueio:** issues de produto (páginas, consent) não fecham sem **pelo menos v1** de W1–W5 mergeados em `legal-docs/main`.
-
-**Paralelo:** W1–W2 devem preceder ou correr em paralelo com trial [.github#14](https://github.com/saas-auto-catalogo/.github/issues/14) — register exige termos + privacidade.
+**Status:** Todas as etapas técnicas e de escrita do épico jurídico #19 foram concluídas e validadas pela suíte de fumaça E2E.
 
 ---
 
 ## 8. Posição na pipeline
 
 ```
-#16 comercial (concluído) → #14 trial → #18 jurídico → go-live
+#16 comercial (concluído) → #14 trial → #19 jurídico (concluído ✅) → go-live
 ```
 
 Épico pai de produto: [.github#12 Fase 11/12](https://github.com/saas-auto-catalogo/.github/issues/12)

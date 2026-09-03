@@ -125,7 +125,23 @@ Valida server-side uma URL de feed XML **sem persistir** `FeedConfig`. Usado pel
 | `npm run test:dashboard` | Stats, vehicles, audit-logs, issues, activity |
 | `npm run test:subscription` | Stripe lifecycle e billing |
 | `npm run test:commercial` | Smoke E2E register-first (épico #16) |
+| `npm run test:legal` | Documentos jurídicos e aceites (#70) |
+| `npm run test:legal:smoke` | Smoke E2E — aceite jurídico no funil comercial (#21 / #19) |
 | `npm run test:all` | Suite agregada |
+
+### Smoke E2E Jurídico no Funil (#21)
+
+Valida a integridade da camada jurídica no funil comercial completo (Fase 12 / épico #19):
+- **Register Guardrails:** Bloqueio (`422`) sem `legalAcceptances`, com array vazio, faltando termos/privacidade ou com hash/versão adulterados.
+- **Register Sucesso:** Cadastro (`201`) persistindo aceites com auditoria completa de `ipAddress` e `userAgent`.
+- **Subscribe / Checkout:** Bloqueio (`422`) sem `contrato-saas` vigente; sucesso (`201`) gerando sessão Stripe e persistindo aceite vinculado ao `workspaceId`.
+- **Documentos Públicos `/legal/*`:** Confirmação da lista pública com os 5 slugs vigentes (`termos-de-uso`, `politica-de-privacidade`, `politica-de-cookies`, `contrato-saas`, `aviso-lgpd`) e rotas individuais.
+- **Cookie Consent LGPD:** Bloqueio de analíticos sem consentimento e liberação sob aceite explícito.
+
+Executar localmente:
+```bash
+npm run test:legal:smoke
+```
 
 ## CI (GitHub Actions)
 
