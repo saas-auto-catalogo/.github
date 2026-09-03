@@ -20,6 +20,8 @@ Documentação operacional e de desenvolvimento do ecossistema. Os READMEs de ca
 - [Meta DAA Feed](../specs/meta-daa-feed-specification.md)
 - [Mapeamento de feeds XML/JSON](../specs/vehicle-feed-mapping.md)
 - [RNFs e SLA](../specs/non-functional-requirements-sla.md)
+- [Jurídico Akoma Ntoso](../specs/legal-akn-specification.md)
+- [Microcopy jurídico (cookies e checkboxes)](../specs/legal-microcopy.md)
 - [Contribuição](../../CONTRIBUTING.md)
 
 ## Ambiente local (visão rápida)

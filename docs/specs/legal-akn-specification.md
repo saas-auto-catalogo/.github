@@ -182,7 +182,11 @@ O backend **rejeita** register/checkout se hash ou versão não corresponder ao 
 
 ### 5.3 Microcopy (W6)
 
-Textos curtos do banner de cookies e labels dos checkboxes ficam em issue dedicada; não fazem parte do AKN XML.
+Textos curtos do banner de cookies e labels dos checkboxes **não** fazem parte do AKN XML.
+
+Fonte aprovada: [legal-microcopy.md](./legal-microcopy.md) (issue [.github#20](https://github.com/saas-auto-catalogo/.github/issues/20)).
+
+Consumo: banner em `marketing-site-blog`; checkboxes de register e subscribe em `frontend-app`. Links apontam para `/legal/*` no marketing.
 
 ---
 
