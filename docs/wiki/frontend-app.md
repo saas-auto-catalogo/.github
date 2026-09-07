@@ -1,6 +1,6 @@
 # Wiki — frontend-app
 
-Painel web do lojista (SPA): dashboard com dados reais, inventário, catálogo Meta, XML Mapper e autenticação.
+Painel web do lojista da plataforma **DriveSync** (SPA): dashboard com dados reais, inventário, catálogo Meta, XML Mapper e autenticação.
 
 ## Stack
 

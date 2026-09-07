@@ -1,6 +1,6 @@
 # ⚡ Especificação de Requisitos Não-Funcionais (RNFs), Performance, SLA e Segurança
 
-> **Documento de Engenharia de Requisitos Não-Funcionais — SaaS Auto Catálogo**  
+> **Documento de Engenharia de Requisitos Não-Funcionais — DriveSync (SaaS Auto Catálogo)**  
 > **Referência:** Issue [#5 - [Task][Specs] Engenharia de Requisitos Não-Funcionais (RNFs), Performance, SLA e Segurança](https://github.com/saas-auto-catalogo/.github/issues/5)  
 > **Status:** Aprovado / Baseline de Engenharia  
 > **Última Atualização:** 2026-08-31  
@@ -9,13 +9,13 @@
 
 ## 1. Visão Geral e Matriz de Metas Não-Funcionais
 
-O **SaaS Auto Catálogo** processa volumes massivos de inventários automotivos diariamente e atua como ponte crítica para orçamentos de mídia de alta relevância no **Meta Automotive Inventory Ads (DAA)**. Instabilidades ou atrasos nos feeds geram rejeição de anúncios e desperdício de verba publicitária das revendas.
+O **DriveSync** processa volumes massivos de inventários automotivos diariamente e atua como ponte crítica para orçamentos de mídia de alta relevância no **Meta Automotive Inventory Ads (DAA)**. Instabilidades ou atrasos nos feeds geram rejeição de anúncios e desperdício de verba publicitária das revendas.
 
 Esta especificação define os limites quantitativos de performance, disponibilidade, resiliência, escalabilidade, segurança e conformidade com a LGPD.
 
 ```mermaid
 flowchart TD
-    subgraph RNFs["Pilares Não-Funcionais do SaaS"]
+    subgraph RNFs["Pilares Não-Funcionais do DriveSync"]
         P1["⚡ Performance & Latência<br/>Feed < 800ms | Parse 50MB < 30s | Heap < 256MB"]
         P2["🛡️ Disponibilidade & SLA<br/>99.9% Uptime | Circuit Breaker | Retries com Jitter"]
         P3["📈 Escalabilidade & Filas<br/>BullMQ + Redis | Picos 08h e 18h | Rate Limiter DMS"]
@@ -200,7 +200,7 @@ flowchart LR
 
 ### 6.1. Metas Oficiais de Core Web Vitals
 
-| Métrica Web | Meta SaaS Auto Catálogo | Limite Máximo Recomendado pelo Google | Estratégia de Otimização |
+| Métrica Web | Meta DriveSync | Limite Máximo Recomendado pelo Google | Estratégia de Otimização |
 |---|---|---|---|
 | **LCP (Largest Contentful Paint)** | `< 1.8s` | `< 2.5s` | Priorização de hero images, pré-conexão de CDN e fonte otimizada (`next/font`) |
 | **CLS (Cumulative Layout Shift)** | `< 0.05` | `< 0.1` | Dimensões de imagens e banners declaradas explicitamente com aspect-ratio |

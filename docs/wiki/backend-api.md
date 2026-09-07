@@ -1,6 +1,6 @@
 # Wiki — backend-api
 
-API core multi-tenant: ingestão de estoque, diffs, feeds Meta DAA, autenticação JWT, dashboard e billing.
+API core multi-tenant do **DriveSync**: ingestão de estoque, diffs, feeds Meta DAA, autenticação JWT, dashboard e billing.
 
 ## Stack
 

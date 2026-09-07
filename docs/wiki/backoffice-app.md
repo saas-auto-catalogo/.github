@@ -1,6 +1,6 @@
 # Wiki — backoffice-app
 
-Painel operacional da equipe SaaS (Super Admin): tenants, feeds, blog IA e métricas globais.
+Painel Super Admin de gestão do ecossistema **DriveSync**: tenants, feeds, blog IA e métricas globais.
 
 ## Stack
 

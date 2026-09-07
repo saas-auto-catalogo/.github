@@ -1,7 +1,7 @@
-# 🏛️ Documento de Arquitetura de Software (SaaS Auto Catálogo)
+# 🏛️ Documento de Arquitetura de Software — DriveSync (SaaS Auto Catálogo)
 
 ## 1. Visão Geral do Sistema
-O sistema conecta concessionárias e revendas de veículos aos canais de tráfego pago da Meta através da ingestão contínua de feeds XML e JSON REST, normalização canônica de dados e geração de catálogos automotivos compatíveis com o Meta Automotive Inventory Ads (DAA).
+O **DriveSync** conecta concessionárias e revendas de veículos aos canais de tráfego pago da Meta através da ingestão contínua de feeds XML e JSON REST, normalização canônica de dados e geração de catálogos automotivos compatíveis com o Meta Automotive Inventory Ads (DAA).
 
 ```mermaid
 flowchart TD
@@ -14,7 +14,7 @@ flowchart TD
     Tenant[Lojista / Concessionária] --> FrontendApp[frontend-app<br/>React 18 + Vite Dashboard]
     FrontendApp --> Backend
     
-    SuperAdmin[Equipe SaaS] --> BackofficeApp[backoffice-app<br/>React 18 + Vite Super Admin]
+    SuperAdmin[Equipe DriveSync] --> BackofficeApp[backoffice-app<br/>React 18 + Vite Super Admin]
     BackofficeApp --> Backend
     
     Lead[Público / Leads] --> MarketingSite[marketing-site-blog<br/>React 18 + Vite Site & Blog]
@@ -30,14 +30,14 @@ flowchart TD
 - **Segurança & LGPD**: Criptografia TLS 1.3 em trânsito e AES-256 em repouso, hashing HMAC-SHA256 para tokens, trilha imutável no `AuditLog`, expurgo automático de logs em 30 dias e suporte a purge de tenant.
 - **Core Web Vitals**: Google Lighthouse 95+, LCP `< 1.8s`, CLS `< 0.05` e INP `< 150ms` nas SPAs Vite (frontend, backoffice, marketing).
 
-## 4. Wiki e documentação operacional
+## 3. Wiki e documentação operacional
 
 - [Índice da Wiki](./docs/wiki/README.md)
 - [backend-api](./docs/wiki/backend-api.md) — rotas, módulos e testes
 - [frontend-app](./docs/wiki/frontend-app.md) — painel do lojista
 - [Roadmap](./docs/wiki/roadmap.md) — épicos e dependências atuais
 
-## 3. Especificações Técnicas de Engenharia
+## 4. Especificações Técnicas de Engenharia
 - [Engenharia de Requisitos Não-Funcionais (RNFs), SLA e Segurança](./docs/specs/non-functional-requirements-sla.md)
 - [Dicionário de Schemas e Mapeamento de Feeds (XML & JSON)](./docs/specs/vehicle-feed-mapping.md)
 - [Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](./docs/specs/meta-daa-feed-specification.md)

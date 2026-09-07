@@ -1,6 +1,6 @@
 # Wiki — ai-content-worker
 
-Worker de conteúdo editorial: pesquisa profunda (LangGraph) + redação SEO (Gemini) para o blog.
+Pipeline editorial de IA do blog oficial **DriveSync**: pesquisa profunda (LangGraph) + redação SEO (Gemini).
 
 ## Pipeline
 
