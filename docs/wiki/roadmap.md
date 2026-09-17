@@ -1,6 +1,6 @@
-# Wiki — Roadmap
+# Wiki — Roadmap DriveSync
 
-Estado atual do produto e ordem sugerida de implementação (set/2026).
+Plano de evolução das entregas do produto **DriveSync** e ordem sugerida de implementação (set/2026).
 
 ## Concluído recentemente
 

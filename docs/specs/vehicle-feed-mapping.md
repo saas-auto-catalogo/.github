@@ -1,6 +1,6 @@
 # 📖 Levantamento de Schemas, Dicionário de Dados e Mapeamento de Feeds Automotivos
 
-> **Documento de Especificação Técnica — SaaS Auto Catálogo**  
+> **Documento de Especificação Técnica — DriveSync (SaaS Auto Catálogo)**  
 > **Referência:** Issue [#2 - [Task][Specs] Levantamento e Dicionário de Schemas XML de Estoque Automotivo](https://github.com/saas-auto-catalogo/.github/issues/2)  
 > **Status:** Aprovado / Baseline de Engenharia  
 > **Última Atualização:** 2026-08-31  
@@ -9,7 +9,7 @@
 
 ## 1. Visão Geral da Ingestão Multicanal
 
-O **SaaS Auto Catálogo** atua como uma camada de sincronização e inteligência de dados entre sistemas heterogêneos de gestão de pátio/DMSs de revendas e concessionárias no Brasil e as plataformas de anúncios dinâmicos, com foco prioritário no **Meta Automotive Inventory Ads (DAA)** (Facebook e Instagram).
+O **DriveSync** atua como uma camada de sincronização e inteligência de dados entre sistemas heterogêneos de gestão de pátio/DMSs de revendas e concessionárias no Brasil e as plataformas de anúncios dinâmicos, com foco prioritário no **Meta Automotive Inventory Ads (DAA)** (Facebook e Instagram).
 
 Para garantir escalabilidade, idempotência e integridade na geração dos catálogos, toda fonte de dados (seja um stream XML tradicional ou uma API REST/JSON moderna) é ingerida através de um adaptador dedicado e convertida para o modelo canônico unificado: **`CanonicalVehicle`**.
 

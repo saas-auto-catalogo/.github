@@ -1,8 +1,8 @@
-# Organização SaaS Auto Catálogo
+# DriveSync — SaaS Auto Catálogo
 
-Bem-vindo à organização oficial do **SaaS Auto Catálogo** no GitHub.
+Bem-vindo à organização oficial do **DriveSync** no GitHub.
 
-O **SaaS Auto Catálogo** é uma plataforma B2B para o setor automotivo que sincroniza estoque entre gestores de pátio/DMS (AutoCerto, Altimus, Sisvag, BomControle, Webmotors e outros) e o **Meta Ads (Automotive Inventory Ads — DAA)** para campanhas dinâmicas no Facebook e Instagram.
+O **DriveSync** (Automotive Ads on Autopilot) é uma plataforma B2B para o setor automotivo que sincroniza estoque entre gestores de pátio/DMS (AutoCerto, Altimus, Sisvag, BomControle, Webmotors e outros) e o **Meta Ads (Automotive Inventory Ads — DAA)** para campanhas dinâmicas no Facebook e Instagram.
 
 ---
 

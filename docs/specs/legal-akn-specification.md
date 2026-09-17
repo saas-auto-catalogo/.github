@@ -1,6 +1,6 @@
 # Especificação Jurídica — Akoma Ntoso 3.0
 
-> **Documento de Engenharia — SaaS Auto Catálogo**  
+> **Documento de Engenharia — DriveSync (SaaS Auto Catálogo)**  
 > **Épico:** [.github#18](https://github.com/saas-auto-catalogo/.github/issues/18)  
 > **Repositório fonte:** [legal-docs](https://github.com/saas-auto-catalogo/legal-docs)  
 > **Status:** Baseline de governança  

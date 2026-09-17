@@ -1,6 +1,6 @@
 # 🛡️ Especificação de Multi-Tenancy, Isolamento de Workspaces, RBAC e Segurança de Feeds
 
-> **Documento de Especificação Técnica — SaaS Auto Catálogo**  
+> **Documento de Especificação Técnica — DriveSync (SaaS Auto Catálogo)**  
 > **Referência:** Issue [#4 - [Task][Specs] Modelagem de Multi-Tenancy, Isolamento de Workspaces e RBAC](https://github.com/saas-auto-catalogo/.github/issues/4)  
 > **Status:** Aprovado / Baseline de Engenharia  
 > **Última Atualização:** 2026-08-31  
@@ -9,7 +9,7 @@
 
 ## 1. Arquitetura de Multi-Tenancy e Segregação de Dados
 
-O **SaaS Auto Catálogo** adota a arquitetura de **Shared Database, Shared Schema com Segregação Lógica por `workspace_id`**, garantindo alta eficiência no uso de recursos computacionais, facilidade de migração e manutenção, aliada a rigorosas garantias de isolamento de dados entre diferentes concessionárias e revendas.
+O **DriveSync** adota a arquitetura de **Shared Database, Shared Schema com Segregação Lógica por `workspace_id`**, garantindo alta eficiência no uso de recursos computacionais, facilidade de migração e manutenção, aliada a rigorosas garantias de isolamento de dados entre diferentes concessionárias e revendas.
 
 ```mermaid
 flowchart TD
@@ -99,7 +99,7 @@ export const tenantPrisma = (workspaceId: string) => {
 O sistema define quatro papéis com responsabilidades e privilégios estritamente delimitados:
 
 ### 3.1. Definição dos Papéis (`RoleEnum`)
-1. **`SUPER_ADMIN` (Equipe Interna do SaaS - Backoffice)**:
+1. **`SUPER_ADMIN` (Equipe Interna do DriveSync - Backoffice)**:
    - Acesso cross-tenant irrestrito ao painel `backoffice-app`.
    - Gestão de planos, faturamento global, infraestrutura de feeds e métricas operacionais.
    - Capacidade de executar **Impersonation** auditado em contas de clientes.

@@ -1,6 +1,6 @@
 # Wiki — marketing-site-blog
 
-Site institucional e blog *Audience First* para aquisição orgânica e conversão de planos.
+Site institucional e blog *Audience First* da marca **DriveSync** (*Automotive Ads on Autopilot*) para aquisição orgânica e conversão de planos.
 
 ## Stack
 

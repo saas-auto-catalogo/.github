@@ -1,6 +1,6 @@
 # 🚗 Especificação Técnica do Feed Meta Automotive Inventory Ads (DAA)
 
-> **Documento de Especificação Técnica — SaaS Auto Catálogo**  
+> **Documento de Especificação Técnica — DriveSync (SaaS Auto Catálogo)**  
 > **Referência:** Issue [#3 - [Task][Specs] Especificação Técnica do Catálogo Meta Automotive Inventory Ads (DAA)](https://github.com/saas-auto-catalogo/.github/issues/3)  
 > **Status:** Aprovado / Baseline de Engenharia  
 > **Última Atualização:** 2026-08-31  

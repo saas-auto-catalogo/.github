@@ -1,6 +1,6 @@
-# Wiki — SaaS Auto Catálogo
+# Wiki — DriveSync (SaaS Auto Catálogo)
 
-Documentação operacional e de desenvolvimento do ecossistema. Os READMEs de cada repositório trazem o essencial; esta wiki aprofunda arquitetura, APIs, módulos e roadmap.
+Documentação operacional e de desenvolvimento do ecossistema DriveSync. Os READMEs de cada repositório trazem o essencial; esta wiki aprofunda arquitetura, APIs, módulos e roadmap.
 
 ## Índice
 
